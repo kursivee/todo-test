@@ -1,0 +1,17 @@
+<div ng-controller="MyController as vm">
+  <ul>
+    <li ng-repeat="todo in vm.todoList">
+      <input type="checkbox" ng-model="todo.amIDone">
+      <span>
+        {{todo.title}}: {{todo.task}}
+      </span>
+    </li>
+  </ul>
+  <form ng-submit="vm.addTodo()">
+    <input type="text" ng-model="vm.todoTitle"  size="30"
+           placeholder="Todo title">
+    <input type="text" ng-model="vm.todoTask"  size="30"
+           placeholder="Todo task">
+    <input class="btn-primary" type="submit" value="add">
+  </form>
+</div>
